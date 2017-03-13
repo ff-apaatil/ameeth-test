@@ -1,19 +1,20 @@
 pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
+     node() {
+        ws ('workspace/customDir') {
+            stage('Build') {
+                steps {
+                    echo 'Building..'
+                }
             }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+            stage('Test') {
+                steps {
+                    echo 'Testing..'
+                }
             }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+            stage('Deploy') {
+                steps {
+                    echo 'Deploying....'
+                }
             }
         }
         
