@@ -14,8 +14,8 @@ node() {
     stage('Build') {
             def t = new SayHello()
             echo 'say hallooooooo----------'
-            t.sayHello( 'Building..' )
-            echo t.anotherMethod()
+            t.sayHello( '*************************' )
+            echo t.anotherMethod(' test ')
     }
     stage('Test') {
             echo 'Testing..'
