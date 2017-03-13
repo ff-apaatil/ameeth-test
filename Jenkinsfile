@@ -1,4 +1,6 @@
 #!/usr/bin/env groovy
+@Library('ff_library')
+import com.ff.SayHello
 node() {
     stage('Code Checkout'){
         checkout([
@@ -10,7 +12,8 @@ node() {
         ])
     }
     stage('Build') {
-            sayHello( 'Building..' )
+            def t = new SayHello()
+            t.sayHello( 'Building..' )
     }
     stage('Test') {
             echo 'Testing..'
