@@ -10,7 +10,7 @@ node() {
         ])
     }
     stage('Build') {
-            echo 'Building..'
+            sayHello( 'Building..' )
     }
     stage('Test') {
             echo 'Testing..'
