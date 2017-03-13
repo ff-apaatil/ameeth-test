@@ -1,7 +1,7 @@
-ws("workspace/${env.JOB_NAME}") {
-    pipeline {
-        agent any
-        stages {
+pipeline {
+    agent any
+    stages {
+        ws("workspace/${env.JOB_NAME}") {
             stage('Build') {
                 steps {
                     echo 'Building..'
