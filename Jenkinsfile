@@ -1,6 +1,6 @@
-pipeline {
-    agent any
-    ws("workspace/${env.JOB_NAME}") {
+ws("workspace/${env.JOB_NAME}") {
+    pipeline {
+        agent any
         stages {
             stage('Build') {
                 steps {
