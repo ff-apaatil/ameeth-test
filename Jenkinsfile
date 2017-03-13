@@ -13,7 +13,9 @@ node() {
     }
     stage('Build') {
             def t = new SayHello()
+            echo 'say hallooooooo----------'
             t.sayHello( 'Building..' )
+
     }
     stage('Test') {
             echo 'Testing..'
